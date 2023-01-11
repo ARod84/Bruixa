@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebFont from 'webfontloader';
-import './index.css';
+// Firebase
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// Route Components
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Layout from './layouts/Layout';
@@ -10,6 +13,21 @@ import Lenormand from './pages/tiradas/Lenormand';
 import Pronostico from './pages/tiradas/Pronostico';
 import Tarot from './pages/tiradas/Tarot';
 import Eneagrama from './pages/tiradas/Eneagrama';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAtLfr01oOZ06uk2xrKqJr9ku6LacHODIE",
+  authDomain: "bruixa-481d5.firebaseapp.com",
+  projectId: "bruixa-481d5",
+  storageBucket: "bruixa-481d5.appspot.com",
+  messagingSenderId: "536371485287",
+  appId: "1:536371485287:web:f2e0917824ed0fe7e312c2",
+  measurementId: "G-KKS5TB14NZ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 WebFont.load({
