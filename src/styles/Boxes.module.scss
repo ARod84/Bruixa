@@ -1,0 +1,103 @@
+/**************************
+ ***** BOXES STYLES *******
+ **************************/
+.bigBox {
+    grid-area: bigBox;
+    width: 100%;
+}
+
+.first {
+    grid-area: first;
+}
+
+.second {
+    grid-area: second;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+    grid-area: left;
+}
+
+.right {
+    text-align: right;
+    grid-area: right;
+}
+
+.figureWrapper {
+    grid-area: figure;
+}
+
+/**************************
+ ******* SMALL BOX ********
+ **************************/
+.smallBoxLeft {
+    display: grid;
+    grid-template-columns: .25fr .75fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "figure left";
+    justify-items: start;
+}
+
+.smallBoxRight {
+    display: grid;
+    grid-template-columns: .75fr .25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "right figure";
+    justify-items: end;
+}
+
+/**************************
+ ***** FIGURES STYLES *****
+ **************************/
+.figure {
+    background: linear-gradient( 120deg, 
+                #A96AAD 0%, 
+                transparent 50%, 
+                #5A6394 90%, 
+                rgba(62,83,199,1) 100%
+              );
+    border-radius: 1rem;
+    max-height: 250px;
+    margin: 0;
+}
+
+.figureSvg {
+    fill: #ffffff;
+    width: 20vw;
+    height: auto;
+}
+
+/**************************
+ ********* TITLES *********
+ **************************/
+.bbTitle {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+    font-size: 2.21rem;
+    font-weight: 100;
+}
+
+.bbCaption {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.sbTitle {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.sbCaption {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+    max-width: 250px;
+}

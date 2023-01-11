@@ -1,0 +1,23 @@
+/**************************
+ ***** GENERAL STYLES *****
+ **************************/
+
+ .page {
+    max-width: 90vw;
+    margin: 0 auto;
+ }
+
+ /**************************
+  ******* HOME STYLES ******
+  **************************/
+
+ .home {
+     display: grid;
+     grid-template-columns: .5fr .5fr;
+     grid-template-rows: .5fr .5fr;
+     grid-template-areas: "bigBox bigBox"
+                          "first second";
+     column-gap: 2.5rem;
+     row-gap: 2.5rem;
+     margin: 0 0 2.5rem 0;
+ }

@@ -1,0 +1,28 @@
+.back {
+    border: 1px solid white;
+    background-color: black;
+    color: #ffffff;
+    position: relative;
+    pointer-events: all;
+}
+
+.card {
+    border: 1px solid white;
+    background-color: blueviolet;
+    color: #ffffff;
+    position: relative;
+}
+
+.carta {
+    margin-left: -120px;
+    height: 200px;
+    width: 150px;
+    list-style: none;
+    color: #ffffff;
+}
+
+.imagen {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+} 

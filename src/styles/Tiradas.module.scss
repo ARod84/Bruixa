@@ -1,0 +1,13 @@
+
+.mazoDeck {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: .75fr .25fr;
+   justify-items: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.mazoTarot {
+    display: flex;
+}

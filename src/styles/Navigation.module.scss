@@ -1,0 +1,106 @@
+.header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: .25fr .5fr .25fr;
+    justify-items: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 40px 0;
+}
+
+.title {
+    font-family: 'Noto Nastaliq Urdu';
+    color: #ffffff;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.navLinks {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    color: #ffffff;
+}
+
+.link {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.links li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.dlLinks {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    padding: .5rem 1.5rem;
+    background: rgb(177,227,250);
+    background: linear-gradient( 120deg, 
+      #A96AAD 0%, 
+      transparent 50%, 
+      #5A6394 90%, 
+      rgba(62,83,199,1) 100%
+    );
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    &:hover {
+        background: linear-gradient( 120deg, 
+        #A96AAD 0%,
+        rgba(62,83,199,0.25) 10%,
+        rgba(177,227,250, 0.35) 50%,
+        rgba(62,83,199,0.25) 90%,
+        #A96AAD 100%, 
+        );
+    }
+}
+
+.dlLinks a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.backDrop {
+    width: 28.668%;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to left, #5A6394, #445760);
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 0;
+    border: none;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    margin: 0;
+}
+
+/*********************
+ ****** FOOTER *******
+ *********************/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: .85rem;
+    font-family: 'Nunito Sans', sans-serif;
+}

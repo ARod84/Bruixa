@@ -1,0 +1,6 @@
+import './Global.module.scss'
+import './Buttons.module.scss'
+import './Cartas.module.scss'
+import './Tiradas.module.scss'
+import './Navigation.module.scss'
+import './Boxes.module.scss'
