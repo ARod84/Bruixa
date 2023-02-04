@@ -1,0 +1,40 @@
+/************************
+ ******* GRADIENTS*******
+ ************************/
+
+$linear-bruixa: linear-gradient( 120deg, 
+                                 #A96AAD 0%, 
+                                 #242424 50%, 
+                                 #5A6394 90%, 
+                                 rgba(62,83,199,1) 100%
+                            );
+
+$radial-bruixa-pad: radial-gradient( 
+                                     #A96AAD 0%, 
+                                     rgba(0,0,0,0.25) 100%, 
+                                );
+
+$radial-bruixa-enf: radial-gradient( 
+                                     #242424 0%,
+                                     rgba(62,83,199,1) 20%, 
+                                     #5A6394 90%, 
+                                     #242424 100%, 
+                                );
+/************************
+ ******* COLORES ********
+ ************************/
+
+$bruixa-violet: #5A6394;
+$bruixa-purple: #A96AAD;
+$bruixa-black: #242424;
+$bruixa-blue: #3E53C7;
+$bruixa-green: #CCFA6F;
+
+/************************
+ ******** SIZES *********
+ ************************/
+$card-height: 8vh;
+$card-width: 2.66vw;
+
+$card-mob-height: 10vh;
+$card-mob-width: 12vw;

@@ -1,0 +1,17 @@
+@import '../styles/Variables.module.scss';
+
+.circularGradient {
+    background: $linear-bruixa;
+    border-radius: 50%;
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.xs {
+    width: 50vw;
+}
+
+.xl {
+    display: block;
+    width: 21.33vw;
+    height: auto;
+}

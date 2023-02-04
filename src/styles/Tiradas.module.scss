@@ -1,13 +1,198 @@
+@import '../styles/Variables.module.scss';
+
+/*************** 1 ****************
+ ******* TIRADA TRES CARTAS *******
+ **********************************/
 
 .mazoDeck {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: .75fr .25fr;
-   justify-items: center;
-   align-items: center;
-   height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 55vh 25vh;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.mobileMazoDeck {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60vh 20vh;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
 }
 
 .mazoTarot {
     display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-left: 25px;
+}
+
+.mazoWrapper {
+    text-align: center;
+}
+
+/************ 2 ***************
+ ****** TIRADA ENEAGRAMA ******
+ ******************************/
+
+.eneagrama {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60vh 20vh;
+    gap: 1rem;
+    align-items: end;
+    justify-items: center;
+    max-height: 100%;
+}
+
+.mobileEneagrama {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40vh 40vh;
+    gap: 1rem;
+    align-items: end;
+    justify-items: center;
+    max-height: 100%;
+}
+
+
+
+     /*----- 2.1 -----*/
+/****** PAD ENEAGRAMA ******/
+     /*--------------*/
+.eneagramaPad {
+    align-self: center;
+}
+
+
+      /*----- 1.1 -----*/
+/****** PAD TRES CARTAS *******/
+      /*---------------*/
+
+.padTresCartas {
+    grid-area: pad;
+    display: grid;
+    grid-template-columns: .333fr .333fr .333fr;
+    grid-template-rows: .5fr .5fr;
+    grid-template-areas: "secondCard secondCard secondCard"
+                            "firstCard . thirdCard";
+    justify-items: center;
+    gap: 5rem;
+}
+    
+.firstCard {
+    grid-area: firstCard;
+    border-radius: 8px;
+    height: calc($card-height + 20px);
+    width: calc($card-width + 20px);
+    background: $radial-bruixa-pad;
+}
+
+.secondCard {
+    grid-area: secondCard;
+    border-radius: 8px;
+    height: calc($card-height + 20px);
+    width: calc($card-width + 20px);
+    background: $radial-bruixa-pad;
+}
+
+.thirdCard {
+    grid-area: thirdCard;
+    border-radius: 8px;
+    height: calc($card-height + 20px);
+    width: calc($card-width + 20px);
+    background: $radial-bruixa-pad;
+}
+    
+@media (max-width: 767px) {
+    .firstCard {
+        height: calc($card-mob-height + 10px);
+        width: calc($card-mob-width + 10px);
+    }
+    
+    .secondCard {
+        height: calc($card-mob-height + 10px);
+        width: calc($card-mob-width + 10px);
+    }
+    
+    .thirdCard {
+        height: calc($card-mob-height + 10px);
+        width: calc($card-mob-width + 10px);
+    }
+
+    .mazoTarot {
+        display: flex;
+        position: relative;
+        margin-bottom: 2rem;
+        max-width: 80vw;
+    }
+}
+
+    /*----- 1.3 -----*/
+/**** PAD GRAND TABLEAU ****/
+    /*---------------*/
+
+.padTableau {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 5;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    width: 35%;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.pad {
+    border-radius: 8px;
+    height: calc($card-height + 10px);
+    width: calc($card-width + 10px);
+    background: $radial-bruixa-pad;
+}
+
+.mobPadTableau {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 5;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mobPad {
+    border-radius: 8px;
+    height: calc($card-mob-height - 10px);
+    width: calc($card-mob-width - 10px);
+    background: $radial-bruixa-pad;
+}
+
+  /*----- 1.3 -----*/
+/****** PAD CRUZ ******/
+  /*---------------*/
+.padCruz {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 25%;
+    gap: 1rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+@media(max-width: 767px) {
+    .padCruz {
+        padding-top: .5rem;
+        width: 60%;
+        gap: .5rem;
+    }
 }

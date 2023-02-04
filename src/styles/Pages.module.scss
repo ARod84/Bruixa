@@ -5,6 +5,7 @@
  .page {
     max-width: 90vw;
     margin: 0 auto;
+    height: 85vh;
  }
 
  /**************************
@@ -14,10 +15,40 @@
  .home {
      display: grid;
      grid-template-columns: .5fr .5fr;
-     grid-template-rows: .5fr .5fr;
+     grid-template-rows: 60vh 20vh;
+     align-items: end;
      grid-template-areas: "bigBox bigBox"
                           "first second";
-     column-gap: 2.5rem;
-     row-gap: 2.5rem;
-     margin: 0 0 2.5rem 0;
+     gap: 1rem;
+     margin: 0;
+ }
+
+ .mobileHome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .33fr .33fr auto;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    margin: 0 0 2.5rem 0;
+ }
+
+/**********************************
+ ******* TIRADA TRES CARTAS *******
+ **********************************/
+ 
+.tarot {
+    /*display: grid;
+    grid-template-columns: .33fr .33fr .33fr;
+    grid-template-rows: .35fr .65fr;
+    grid-template-areas: "mazo mazo mazo";
+    justify-items: center;*/
+}
+
+/**********************************
+ ******* TIRADA TRES CARTAS *******
+ **********************************/
+@media(max-width: 767px) {
+    .page {
+        height: auto;
+    }
  }

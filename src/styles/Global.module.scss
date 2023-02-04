@@ -66,8 +66,17 @@ a:hover {
 }
 
 body {
-    background: radial-gradient(ellipse at top, #B1E3FA, #445760),
+    background: radial-gradient(ellipse at top, #A96AAD, #242424),
             radial-gradient(ellipse at bottom, #604E61, #445760);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100% 250vh;
+    background-repeat: repeat-y;
 } 
+
+@media (max-width: 767px) {
+    body {
+        background: radial-gradient(ellipse at top, #A96AAD, #242424),
+                radial-gradient(ellipse at bottom, #604E61, #445760);
+        background-size: 100% 180vh;
+        background-repeat: repeat-y;
+    } 
+}

@@ -1,28 +1,37 @@
+@import '../styles/Variables.module.scss';
+
 .back {
-    border: 1px solid white;
-    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    background: $linear-bruixa;
     color: #ffffff;
-    position: relative;
     pointer-events: all;
 }
 
 .card {
-    border: 1px solid white;
-    background-color: blueviolet;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: $linear-bruixa;
     color: #ffffff;
     position: relative;
+    border-radius: 8px;
 }
 
 .carta {
-    margin-left: -120px;
-    height: 200px;
-    width: 150px;
+    height: $card-height;
+    width: $card-width;
     list-style: none;
     color: #ffffff;
 }
 
 .imagen {
-    width: 150px;
-    height: 200px;
+    height: $card-height;
+    width: $card-width;
     object-fit: cover;
 } 
+
+@media (max-width: 767px) {
+    .carta {
+        height: $card-mob-height;
+        width: $card-mob-width;
+    }
+}

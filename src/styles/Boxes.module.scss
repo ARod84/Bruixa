@@ -1,9 +1,15 @@
+@import '../styles/Variables.module.scss';
+
 /**************************
  ***** BOXES STYLES *******
  **************************/
 .bigBox {
     grid-area: bigBox;
     width: 100%;
+}
+
+.mobileBigBox {
+    margin-top: 2.5rem;
 }
 
 .first {
@@ -55,20 +61,31 @@
  ***** FIGURES STYLES *****
  **************************/
 .figure {
-    background: linear-gradient( 120deg, 
+   /* background: linear-gradient( 120deg, 
                 #A96AAD 0%, 
                 transparent 50%, 
                 #5A6394 90%, 
                 rgba(62,83,199,1) 100%
-              );
+              ); */
     border-radius: 1rem;
-    max-height: 250px;
+    max-height: calc($card-height + 6rem);
     margin: 0;
+    opacity: 0.85;
 }
 
 .figureSvg {
+    display: block;
+    margin: 0 auto;
     fill: #ffffff;
-    width: 20vw;
+    width: 21.33vw;
+    height: auto;
+}
+
+.figureSvgMob {
+    display: block;
+    margin: 0 auto;
+    fill: #ffffff;
+    width: 80%;
     height: auto;
 }
 
@@ -79,24 +96,27 @@
     font-family: 'Nunito Sans', sans-serif;
     color: #ffffff;
     font-size: 2.21rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .bbCaption {
     font-family: 'Nunito Sans', sans-serif;
     color: #ffffff;
     font-size: 1.1rem;
+    font-weight: 100;
 }
 
 .sbTitle {
     font-family: 'Nunito Sans', sans-serif;
     color: #ffffff;
     font-size: 1.8rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .sbCaption {
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 100;
     color: #ffffff;
     font-size: 1.1rem;
     max-width: 250px;

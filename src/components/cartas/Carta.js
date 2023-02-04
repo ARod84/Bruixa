@@ -1,5 +1,7 @@
-import React from 'react'
-import styles from '../../styles/Cartas.module.scss'
+import React from 'react';
+// Components
+import CartaBack from './CartaBack';
+import CartaFlipped from './CartaFlipped';
 
 
 const Carta = ({
@@ -10,31 +12,35 @@ const Carta = ({
   isActive,
   ver
 }) => {
-  
-  const handleCard = () => {
-    !isActive && clickCard(index)
-  }
+
+  const position = {
+    marginLeft: '-28px',
+    zIndex: 1
+  };
 
   return (
     <React.Fragment>
-    { !ver ?
-      <li 
-        onClick={handleCard} 
-        className={`${styles.carta} ${isActive ? styles.card : styles.back}`} style={{zIndex: 1}}>
-      </li>
-    : 
+    { !ver ? (
+      <CartaBack
+        isActive={isActive}
+        clickCard={clickCard}
+        index={index}
+        position={position}
+        />
+    ):( 
       <React.Fragment>
         {isActive ? (
-        <li className={styles.carta}>
-          <img src={image} alt={title} className={styles.imagen} />
-        </li>)
-        : 
+        <CartaFlipped 
+          image={image}
+          title={title}
+          />
+        ):(
           null
-        }
+        )}
       </React.Fragment>
-    }
+    )}
     </React.Fragment>
   )
-}
+};
 
-export default Carta
+export default Carta;
